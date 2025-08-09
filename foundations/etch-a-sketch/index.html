@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Etch-a-Sketch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Etch-a-Sketch</h1>
+
+    <div class="controls">
+      <button id="newGridBtn" type="button">New Grid</button>
+      <button id="clearBtn" type="button">Clear Colors</button>
+
+      <label for="modeSelect" class="mode-label">Mode</label>
+      <select id="modeSelect" aria-label="color mode">
+        <option value="black">Black</option>
+        <option value="random">Random Color</option>
+        <option value="darken">Progressive Darken</option>
+      </select>
+    </div>
+
+    <!-- container is only one element in HTML; squares are generated in JS -->
+    <div id="gridContainer" class="grid-container" role="region" aria-label="Sketch pad"></div>
+
+    <p class="hint">Tip: enter a grid size (1–100). Default: 16. Use "Random Color" for colorful lines.</p>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
